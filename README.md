@@ -17,6 +17,6 @@
 
 * if-switch-var             : [if-switch-var.cpp](./c++17/if-switch-var.cpp)       
 * Structured binding        : [structured_binding.cpp](./c++17/structured_binding.cpp)
-* trail_type_inference      : [trail_type_inference17.cpp](./c++11/trail_type_inference17.cpp)
+* trail_type_inference      : [trail_type_inference17.cpp](./c++17/trail_type_inference17.cpp)
 
 ### C++20
