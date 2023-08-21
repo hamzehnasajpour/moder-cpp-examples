@@ -6,3 +6,4 @@ Examples:
 * initializer_list      - C++11 : [initializer_list.cpp](./initializer_list.cpp)
 * tuple                 - C++11 : [tuple.cpp](./tuple.cpp)
 * Structured binding    - C++17 : [structured_binding.cpp](./structured_binding.cpp)
+* auto and decltype     - C++11 : [auto_decltype.cpp](./auto_decltype.cpp)
