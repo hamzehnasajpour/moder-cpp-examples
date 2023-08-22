@@ -12,6 +12,7 @@
 * trail_type_inference      : [trail_type_inference.cpp](./c++11/trail_type_inference.cpp)
 
 ### C++14   
+* decltype(auto)            : [decltype_auto.cpp](./c++14/decltype_auto.cpp)
 
 ### C++17   
 
