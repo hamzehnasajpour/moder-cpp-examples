@@ -12,6 +12,7 @@
 * trail_type_inference      : [trail_type_inference.cpp](./c++11/trail_type_inference.cpp)
 * range based for loop      : [rangebased_for_loop](./c++11/rangebased_for_loop.cpp)
 * type alias template       : [type_alias_template](./c++11/type_alias_template.cpp)
+* variadic template         : [variadic_template](./c++11/variadic_template.cpp)
 
 ### C++14   
 * decltype(auto)            : [decltype_auto.cpp](./c++14/decltype_auto.cpp)
