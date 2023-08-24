@@ -25,5 +25,7 @@
 * if-constexpr              : [if_constexpr](./c++17/if_constexpr.cpp)
 * variable param template 
                 expansion   : [variable_param_template_exp](./c++17/variable_param_template_exp.cpp)
+* fold expression           : [fold_expression](./c++17/fold_expression.cpp)
+
 
 ### C++20
