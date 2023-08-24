@@ -23,5 +23,7 @@
 * Structured binding        : [structured_binding.cpp](./c++17/structured_binding.cpp)
 * trail_type_inference      : [trail_type_inference17.cpp](./c++17/trail_type_inference17.cpp)
 * if-constexpr              : [if_constexpr](./c++17/if_constexpr.cpp)
+* variable param template 
+                expansion   : [variable_param_template_exp](./c++17/variable_param_template_exp.cpp)
 
 ### C++20
