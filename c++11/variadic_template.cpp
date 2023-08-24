@@ -23,10 +23,22 @@ void printf2(T0 t0, T... t) {
 	printf2(t...);
 }
 
+template<typename T, typename... Ts>
+	void printf3(T value, Ts... args) {
+		std::cout << value << std::endl;
+		(void) std::initializer_list<T>{([&args] {
+			std::cout << args << std::endl;
+			}(), value)...};
+}
+
 int main() {
 	printf2(1, 2, 3.14,
 		"Pass me any "
 		"number of arguments",
 		"I will print\n");
+	printf3(1, 2, 3.14,
+		"Pass me any "
+		"number of arguments",
+		"I will print\n");		
 	return 0;
 }
