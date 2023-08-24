@@ -19,7 +19,6 @@ void print(T var1, Types... var2) {
 	print(var2...);
 }
 
-// Driver code
 int main() {
 	print(1, 2, 3.14,
 		"Pass me any "
