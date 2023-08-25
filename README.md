@@ -20,6 +20,7 @@
 * override and final        : [override_final](./c++11/override_final.cpp)
 * explicit delete default 
                 function    : [explicit_delete_default_function](./c++11/explicit_delete_default_function.cpp)
+* enum class                : [enum_class](./c++11/enum_class.cpp)
 
 
 ### C++14   
