@@ -23,6 +23,6 @@ public:
 };
 
 int main(){
-    Magic m();
+    Magic m;
     return 0;
 }
