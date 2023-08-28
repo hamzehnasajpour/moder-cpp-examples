@@ -21,7 +21,7 @@
 * explicit delete default 
                 function    : [explicit_delete_default_function](./c++11/explicit_delete_default_function.cpp)
 * enum class                : [enum_class](./c++11/enum_class.cpp)
-
+* lambda                    : [lambda](./c+11/lambda.cpp)
 
 ### C++14   
 * decltype(auto)            : [decltype_auto.cpp](./c++14/decltype_auto.cpp)
