@@ -27,6 +27,7 @@
 ### C++14   
 * decltype(auto)            : [decltype_auto.cpp](./c++14/decltype_auto.cpp)
 * lambda expression capture : [lambda_expr_capture.cpp](./c++14/lambda_expr_capture.cpp)
+* generic lambda            : [generic_lambda.cpp](./c++14/generic_lambda.cpp)
 
 
 ### C++17   
