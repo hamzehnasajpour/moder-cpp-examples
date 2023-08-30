@@ -23,7 +23,9 @@
 * enum class                : [enum_class](./c++11/enum_class.cpp)
 * lambda                    : [lambda](./c+11/lambda.cpp)
 * std::function             : [std_function](./c++11/std_function.cpp)
-
+* std::bind
+  std::placeholder          : [std_bind_placeholder](./c++11/std_bind_placeholder.cpp)
+  
 
 ### C++14   
 * decltype(auto)            : [decltype_auto.cpp](./c++14/decltype_auto.cpp)

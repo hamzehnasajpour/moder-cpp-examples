@@ -15,3 +15,4 @@ add_executable(explicit_delete_default_function explicit_delete_default_function
 add_executable(enum_class enum_class.cpp)
 add_executable(lambda lambda.cpp)
 add_executable(std_function std_function.cpp)
+add_executable(std_bind_placeholder std_bind_placeholder.cpp)
