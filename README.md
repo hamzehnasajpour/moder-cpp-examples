@@ -22,6 +22,7 @@
                 function    : [explicit_delete_default_function](./c++11/explicit_delete_default_function.cpp)
 * enum class                : [enum_class](./c++11/enum_class.cpp)
 * lambda                    : [lambda](./c+11/lambda.cpp)
+* std::function             : [std_function](./c++11/std_function.cpp)
 
 
 ### C++14   
@@ -30,8 +31,7 @@
 * generic lambda            : [generic_lambda.cpp](./c++14/generic_lambda.cpp)
 
 
-### C++17   
-
+### C++17
 * if-switch-var             : [if-switch-var.cpp](./c++17/if-switch-var.cpp)       
 * Structured binding        : [structured_binding.cpp](./c++17/structured_binding.cpp)
 * trail_type_inference      : [trail_type_inference17.cpp](./c++17/trail_type_inference17.cpp)
