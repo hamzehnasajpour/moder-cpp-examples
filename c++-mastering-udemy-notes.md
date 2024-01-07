@@ -765,3 +765,21 @@ print_value(value);
 
 * Implicit conversions doesn't work on pointers.
 * If you have to pass a string to a function use string_view as type.
+
+### `constexpr` and `consteval`
+```cpp
+constexpr int compute1 (int a);
+consteval int compute2 (int a);
+
+int a{10};
+const int c{10};
+
+int result = compute1(1);             // OK
+int result = compute1(a);             // OK
+constexpr int result = compute1(a);   // OK
+int result = compute1(c);
+
+int result = compute2(1);             // OK
+int result = compute2(a);             // compile error
+int result = compute1(c);             // OK
+```
