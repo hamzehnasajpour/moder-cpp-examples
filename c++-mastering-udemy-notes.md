@@ -724,3 +724,44 @@ stv.remove_prefix(2);
 
 ```
 **Dont use non null strings for string_view**
+
+
+## Functions
+### Sized array passed by reference
+```cpp
+double sum (const double (&scores)[10]){
+  // pass array of double with length of 10 by reference. Size is fixed.
+}
+```
+
+### Default argument
+```cpp
+void compute(int age = 34){   // set the default values in the declaration
+
+}
+
+compute();
+```
+
+### Implicit conversions
+```cpp
+void print_sum(int a, int b){
+
+}
+
+double a{1.2};
+double b{2.1};
+print_sum(a,b);   // implicit conversions by compiler ==> data lost
+```
+
+```cpp
+void print_value(int value){
+    std::cout << "Value = " << value << std::endl;
+}
+ 
+double value{11.2};
+print_value(value);
+```
+
+* Implicit conversions doesn't work on pointers.
+* If you have to pass a string to a function use string_view as type.
