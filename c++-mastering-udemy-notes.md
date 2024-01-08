@@ -803,5 +803,19 @@ enum class Month : unsigned char {Jan, ...};
 Month month {Month::Jan};
 std::cout << static<int>(month) << std::endl;
 sizeof(month); // sizeof(int)
+
+switch(month){
+  using enum Month;   // C++20 and GCC>=11
+  case Jan:
+  ...
+  case Feb:
+  ...
+}
 ```
 
+### Old enums
+```cpp
+enum Direction{
+  left, right, up, down
+};
+```
