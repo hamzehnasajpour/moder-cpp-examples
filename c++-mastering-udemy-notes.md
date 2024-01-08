@@ -819,3 +819,14 @@ enum Direction{
   left, right, up, down
 };
 ```
+
+### Type aliases
+```cpp
+using HugeInt = unsigned long long int;
+HugeInt huge_num = {18'446'744'679'709'551ull};
+```
+
+```cpp
+typedef unsigned long long int HugeInt;
+HugeInt huge_num = {....};
+```
