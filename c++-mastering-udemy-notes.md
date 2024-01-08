@@ -783,3 +783,25 @@ int result = compute2(1);             // OK
 int result = compute2(a);             // compile error
 int result = compute1(c);             // OK
 ```
+
+## Enums and Type aliases
+
+```cpp
+enum class Month { Jan, Feb, Mar,     // 0, 1, 2
+                   Apr,...};          // 3, ....
+
+enum class Month { Jan = 1, Feb, Mar, // 1, 2, 3
+                   ...};              ,, 4, 5
+
+enum class Month { Jan = 1, January=1, Feb=2, February=2, ...};
+enum class Month { Jan=1, January=Jan,
+                   Feb,   Feburary=Feb,...};
+
+enum class Month { Jan = -30, ....};
+enum class Month : unsigned char {Jan, ...};
+
+Month month {Month::Jan};
+std::cout << static<int>(month) << std::endl;
+sizeof(month); // sizeof(int)
+```
+
