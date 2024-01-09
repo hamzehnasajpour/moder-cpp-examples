@@ -830,3 +830,12 @@ HugeInt huge_num = {18'446'744'679'709'551ull};
 typedef unsigned long long int HugeInt;
 HugeInt huge_num = {....};
 ```
+
+## Arguments to `main`
+```cpp
+int main(int argc, char** argv)
+int main(int argc, char* argv[])
+```
+
+## `std::err`
+use `std::err` to send error log messages.
