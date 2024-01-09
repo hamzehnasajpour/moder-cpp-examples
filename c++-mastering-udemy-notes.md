@@ -839,3 +839,10 @@ int main(int argc, char* argv[])
 
 ## `std::err`
 use `std::err` to send error log messages.
+
+## Getting things out of the function
+1. Function should have access to output variable to store -> by reference is prefered (pointer is another option)
+2. Function should not have access to modify the input -> make them readonly with `const` keyword.
+
+**In modern compilers returning by value is commonly optimized by the compiler when possible and the function is modified
+behind your back to return by reference, avoiding unneccessary copies**
