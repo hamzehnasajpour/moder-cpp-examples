@@ -846,3 +846,25 @@ use `std::err` to send error log messages.
 
 **In modern compilers returning by value is commonly optimized by the compiler when possible and the function is modified
 behind your back to return by reference, avoiding unneccessary copies**
+
+### return by reference
+```cpp
+int &sum(int &a, int &b){
+  int result = a+b;
+  return result;        // reference to local var --> undefined behaviour
+}
+
+int &sum(int a, int b){
+  a+=b;
+  return a;             // reference to local var --> undefined behaviour
+}
+```
+
+### `auto` deduction
+```cpp
+int x{10};
+auto var1{x};   // int (copy)
+auto &var2{x};  // int (reference)
+```
+
+**For return type deduction you have to put the function declaration before calling it, otherwise the compiler can't detect the return type since it can't see the implementation**
