@@ -868,3 +868,18 @@ auto &var2{x};  // int (reference)
 ```
 
 **For return type deduction you have to put the function declaration before calling it, otherwise the compiler can't detect the return type since it can't see the implementation**
+
+### `std::optional` (C++17)
+
+```cpp
+std::optional<int> item{3};
+std::cout << item.value() << std::endl;
+
+std::optional<int> age{std::nullopt};       // you must check if has value otherwise => crash
+if(age.has_value())
+  std::cout << age << std::endl;
+
+std::optional<std::string> name{};          // std::nullopt
+name = "Felafel";
+std::string name1 = name.value_or("pizza"); // if value -> return it otherwise `pizza` as default value
+```
