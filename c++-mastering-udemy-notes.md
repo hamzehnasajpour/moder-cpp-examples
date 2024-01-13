@@ -883,3 +883,28 @@ std::optional<std::string> name{};          // std::nullopt
 name = "Felafel";
 std::string name1 = name.value_or("pizza"); // if value -> return it otherwise `pizza` as default value
 ```
+
+## Function overloading
+just for paremeters, return value is not part of signature.
+* order of parameters
+* number of parameters
+* types of parameters
+
+```cpp
+void say_my_name(const std::string &name);
+void say_my_name(std::string name);
+
+std::string name{"Hamzeh"};
+say_my_name(name);            // compiler error - ambgious call
+```
+
+```cpp
+double max(double a, double b);
+int &max(const int &a, const int &b);
+
+char a{2};
+char b{3};
+auto result = max(a,b);   // double max will be called !!!
+                          // Since the implicit conversions dont work with a function that takes param by non-const ref
+```
+
