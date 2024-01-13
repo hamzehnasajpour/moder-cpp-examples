@@ -908,3 +908,35 @@ auto result = max(a,b);   // double max will be called !!!
                           // Since the implicit conversions dont work with a function that takes param by non-const ref
 ```
 
+### redefinition implementation
+```cpp
+int max(int a, int b){
+  return (a>b)? a: b;
+}
+
+int max(const int a, const int b){
+  return (a>b)? a: b;
+}
+
+// compiler error -> the implementation is equal => compiler thinks they are the same => redefinition function
+```
+
+```cpp
+int max(const int*a, const int* b){
+  return (*a>*b)? *a: *b;
+}
+
+int max(const int* const a, const int* const b){
+  return (*a>*b)? *a: *b;
+}
+
+// compiler error -> the implementation is equal => compiler thinks they are the same => redefinition function
+```
+
+### overloading with default value
+```cpp
+void print_age(int age=33);
+void print_age(long int = 44);
+
+print_age(); // compiler error => confusion since both are valid to call.
+```
