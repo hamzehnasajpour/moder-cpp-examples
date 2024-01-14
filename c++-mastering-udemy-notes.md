@@ -940,3 +940,40 @@ void print_age(long int = 44);
 
 print_age(); // compiler error => confusion since both are valid to call.
 ```
+
+## Lambda functions 
+* Could be without name, anonymous function
+* lambda signature
+```cpp
+[](double a){
+  std::cout << "Hello " << a << std::endl;
+}(12.1); // defince and call since ()
+```
+
+```cpp
+auto result = [] (double a, double b) -> double {
+  return a + b;
+};
+```
+
+```cpp
+double a{11};
+auto func = [a](){
+  // capture by value
+  std::cout <<a << std::endl;
+};
+
+auto func1 = [&a](){
+  // capture by ref
+  std::cout <<a++ << std::endl;
+};
+
+auto func2 = [=](){
+  // capture all by value
+};
+
+auto func3 = [&](){
+  // capture all by ref
+};
+
+```
