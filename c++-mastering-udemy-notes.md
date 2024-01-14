@@ -977,3 +977,23 @@ auto func3 = [&](){
 };
 
 ```
+
+## Functions: misfits
+### static variables
+* Global variable - outside the main and outside other functions. lifetime = application lifetime
+* static variable
+```cpp
+void func(){
+  static int a{0};  // initialize only one time. lifetime = application lifetime
+  ..
+}
+```
+
+### inline functions
+Put the presentation of the functions in the code by compiler to reduce function call overhead.
+* increasing the code size.
+* use it for shodrt and frequently used functions.
+
+### recursive functions
+:)
+
