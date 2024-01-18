@@ -997,3 +997,14 @@ Put the presentation of the functions in the code by compiler to reduce function
 ### recursive functions
 .... :)
 
+
+## C++ Classes
+...
+
+* default ctor
+```cpp
+Animal() = default;   // empty ctor as default
+```
+
+* in `struct` all is `public`, in `class` we can declare as `private` or `public`
+
