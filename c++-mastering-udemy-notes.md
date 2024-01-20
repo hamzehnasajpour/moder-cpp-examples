@@ -1008,3 +1008,15 @@ Animal() = default;   // empty ctor as default
 
 * in `struct` all is `public`, in `class` we can declare as `private` or `public`
 
+## Function Template
+
+```cpp
+template <typename T> T maximum (T a, T b){
+  return (a>b)? a : b;
+}
+maximum<double>(a,b);     // explicitly say that we want the double version called
+```
+
+```cpp
+template <typename T> T& maximum(T &a, T &b);   // template by references
+```
