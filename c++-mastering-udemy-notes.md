@@ -1008,7 +1008,7 @@ Animal() = default;   // empty ctor as default
 
 * in `struct` all is `public`, in `class` we can declare as `private` or `public`
 
-## Function Template
+## Function Templates
 
 ```cpp
 template <typename T> T maximum (T a, T b){
