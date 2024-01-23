@@ -1023,8 +1023,13 @@ template <typename T> T& maximum(T &a, T &b);   // template by references
 
 ### Template overload
 ```cpp
+// Raw function template
 template <typename T> T maximum(T a, T b);
+
+// Function template overloads.
 const char * maximum(const char *a, const char *b);   // will take precedence over any template instance if const char * passed to maximum 
+
+// Function template specialization
 template <typename T> T* maximum(T *a, T* b);         // will take precedence over raw template if a pointer passed to maximum
 
 
