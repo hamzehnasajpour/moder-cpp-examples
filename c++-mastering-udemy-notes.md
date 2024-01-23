@@ -1020,3 +1020,12 @@ maximum<double>(a,b);     // explicitly say that we want the double version call
 ```cpp
 template <typename T> T& maximum(T &a, T &b);   // template by references
 ```
+
+### Template overload
+```cpp
+template <typename T> T maximum(T a, T b);
+const char * maximum(const char *a, const char *b);   // will take precedence over any template instance if const char * passed to maximum 
+template <typename T> T* maximum(T *a, T* b);         // will take precedence over raw template if a pointer passed to maximum
+
+
+```
