@@ -1057,3 +1057,50 @@ template <typename T, typename P>
 
 int res = maximum('a', 12);
 ```
+
+### `decltype`
+
+```cpp
+int a{10};
+double b{1.2};
+decltype((a>b?a:b)) c;
+```
+
+* trailing return type
+```cpp
+// the definition has not to come before calling if you are implementing the trailing return type
+template <typename T, typename P> 
+  auto maximum(T a, P b) -> decltype((a>b)?a:b) {
+    return (a>b)?a:b;
+  }
+```
+
+### `decltype auto`
+
+```cpp
+// we can't split the definition and declaration in decltype auto
+template <typename T, typename P> 
+  decltype(auto) maximum(T a, P b) {
+    return (a>b)?a:b;
+  }
+```
+
+### Default arguments
+```cpp
+template <typename ReturnType = double, typename T, typename P> 
+  ReturnType maximum(T a, P b){
+    return (a>b)?a:b;
+  };
+```
+
+### Non Type template arguments
+* C++20: all types can be used as non type template arguments
+* C++17: only `int` type can be used as ......... 
+```cpp
+template <int threshold, typename T>            // less readable
+  bool isValid(T collection[], size_t size){
+    //...
+  };
+
+bool valid = isValid<200, double>(array,4);
+```
