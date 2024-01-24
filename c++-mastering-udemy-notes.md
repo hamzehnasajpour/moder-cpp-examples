@@ -1034,3 +1034,26 @@ template <typename T> T* maximum(T *a, T* b);         // will take precedence ov
 
 
 ```
+
+### Function template with multiple parameters
+```cpp
+tempalte <typename ReturnType, typename T, typename P> 
+  ReturnType maximum(T a, P b){
+    return (a>b? a:b);
+  }
+int res = maximum<int, char, int>('a', 12);
+int res = maximum<int, char>('a', 12);
+int res = maximum<int>('a', 12);
+int res = maximum('a', 12);                   // compiler error
+```
+
+### Auto return type deduction
+```cpp
+// the definition has to come before calling
+template <typename T, typename P> 
+  auto maximum(T a, P b){
+    return (a>b? a:b);
+  }
+
+int res = maximum('a', 12);
+```
