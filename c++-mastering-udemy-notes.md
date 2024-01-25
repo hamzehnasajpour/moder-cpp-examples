@@ -1093,7 +1093,7 @@ template <typename ReturnType = double, typename T, typename P>
   };
 ```
 
-### Non Type template arguments
+### Non-Type template arguments
 * C++20: all types can be used as non type template arguments
 * C++17: only `int` type can be used as ......... 
 ```cpp
