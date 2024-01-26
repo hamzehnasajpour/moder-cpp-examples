@@ -33,9 +33,9 @@
 ```cpp
 
 int number1 = 15;           // decimal
-int number2 = 017           // oct
-int number3 = 0x0f          // hex
-int number4 = 0b00001111    // bin
+int number2 = 017;          // oct
+int number3 = 0x0f;         // hex
+int number4 = 0b00001111;   // bin
 
 ```
 
@@ -682,7 +682,7 @@ std::to_string(int/double/float);
 
 ```cpp
 int i = std::stoi(  );
-float f = std::stpf(  );
+float f = std::stof(  );
 double d = std::stod(  );
 ...
 ```
