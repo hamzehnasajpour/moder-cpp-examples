@@ -1127,3 +1127,17 @@ auto add = [] <typename T> (T a, T b){
 }
 ```
 
+### Type traits
+```cpp
+#include <type_traits>
+
+template <typename T>
+  void print_number(T n){
+    static_assert(std::is_integer<T>::value, "Must pass in an integral argument");
+    std::cout << "n : " << n << std::endl;
+}
+```
+
+* you can use `std::is_integral_v<...>`
+* you can use this just for types not variables
+* 
