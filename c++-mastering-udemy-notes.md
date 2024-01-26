@@ -1108,6 +1108,22 @@ bool valid = isValid<200, double>(array,4);
 ### Auto function template
 ```cpp
 auto add (auto a, auto b){
-  return (a + b);
+  return (a + b);    // return type is the type with maximum size
 }
 ```
+
+### Named template parameters for lambdas
+```cpp
+auto add = [](auto a, auto b){
+  return a + b;      // return type is the type with maximum size
+}
+```
+
+in C++20 you can use lambda template:
+```cpp
+auto add = [] <typename T> (T a, T b){
+                      // you can define multiple types like template
+  return a + b;       // return type is T
+}
+```
+
