@@ -1104,3 +1104,10 @@ template <int threshold, typename T>            // less readable
 
 bool valid = isValid<200, double>(array,4);
 ```
+
+### Auto function template
+```cpp
+auto add (auto a, auto b){
+  return (a + b);
+}
+```
