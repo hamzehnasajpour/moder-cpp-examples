@@ -1127,7 +1127,7 @@ auto add = [] <typename T> (T a, T b){
 }
 ```
 
-### Type traits
+### type traits
 ```cpp
 #include <type_traits>
 
@@ -1137,6 +1137,8 @@ template <typename T>
     std::cout << "n : " << n << std::endl;
 }
 ```
+
+
 
 * you can use `std::is_integral_v<...>`
 * you can use this just for types not variables
