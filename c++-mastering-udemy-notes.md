@@ -1143,3 +1143,76 @@ template <typename T>
 * you can use `std::is_integral_v<...>`
 * you can use this just for types not variables
 * 
+
+## Concepts - C++20
+This is a new standard feature in C++20 to use defined template just for your specific types of variables.
+an alternative solution for this is:
+```cpp
+template <typename T> T add (T a, T b){
+  static_assert(std::is_integral<T>::value, "must pass as integral");
+  ...
+}
+```
+
+### Core language concepts
+* `same_as`
+* `derived_from`
+* `convertible_to`
+* `integral`
+* ... you can find others in c++20 documents
+
+### how to use
+```cpp
+// syntax 1
+#include <concepts>
+template <typename T> 
+requires std::integral<T> // or you can use requires std::is_integral_v<T>
+T add (T a, T b){
+  return a + b;
+}
+```
+
+```cpp
+#include <concepts>
+// syntax 2
+template <std::integral T> 
+T add (T a, T b){
+  return a + b;
+}
+```
+
+```cpp
+#include <concepts>
+// syntax 3
+auto add (std::integral auto a, std::integral auto b){
+  return a + b;
+}
+```
+
+```cpp
+#include <concepts>
+// syntax 4
+template <typename T>
+T add(T a, T b) requires std::integral<T> {
+  return a + b;
+}
+```
+
+### Build your concepts
+
+```cpp
+template <Typename T>
+concept MyIntegral = std::is_integral_v<T>;
+
+template <Typename T>
+concept Multipliable = requires (T a, T b){
+  a * b;    // just make sure the syntax is valid
+}
+
+template <Typename T>
+concept Incrementable = requires (T a){
+  a++;
+  a+=1;
+  ++a;
+}
+```
