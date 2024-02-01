@@ -1216,3 +1216,23 @@ concept Incrementable = requires (T a){
   ++a;
 }
 ```
+
+```cpp
+template <typename T>
+concept TinyType = requires(T a){
+sizeof(T) <= 4;           // this line only check the syntax
+requires sizeof(T) <= 4;  // this line will be check the statetment at compile time
+}
+
+TinyType auto add (TinyType auto a, TinyType auto b){
+  return a + b;
+}
+```
+
+```cpp
+template <typename T>
+concept Addable = requires (T a, T b){
+  {a + b} noexcept -> std::convertible_to<int>;      // check if a + b is valid syntax, doesn't allow throw exception
+                                                     // and the result is convertible to int 
+};
+```
