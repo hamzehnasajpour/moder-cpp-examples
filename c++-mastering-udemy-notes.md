@@ -1236,3 +1236,11 @@ concept Addable = requires (T a, T b){
                                                      // and the result is convertible to int 
 };
 ```
+
+### Combining the concepts
+```cpp
+template <typename T>
+T func(T t) requires std::integral<T> &&
+            requires my_concept<T>{
+  // ...
+}
