@@ -1276,3 +1276,34 @@ int main() {
     return 0;
 }
 ```
+
+## Structured bindings
+Structured bindings were introduced in C++17 as a feature to simplify working with structured types, such as tuples, pairs, arrays, or user-defined types with public data members. It allows you to bind names to the individual components of a structure or container in a concise and readable way.
+
+```cpp
+#include <tuple>
+
+std::tuple<int, double, std::string> myTuple(42, 3.14, "Hello");
+auto [x, y, z] = myTuple;  // Structured binding
+std::cout << "x: " << x << std::endl;
+```
+
+```cpp
+#include <iostream>
+
+struct Point {
+    double x;
+    double y;
+};
+
+int main() {
+    Point p{1.5, 2.5};
+
+    auto [px, py] = p;  // Structured binding
+
+    std::cout << "x: " << px << std::endl;
+    std::cout << "y: " << py << std::endl;
+
+    return 0;
+}
+```
