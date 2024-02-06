@@ -1307,3 +1307,23 @@ int main() {
     return 0;
 }
 ```
+
+## Initalizer list
+```cpp
+class Test{
+  Test(int a, int b) :
+    m_a(a), m_b(b){
+  };
+};
+```
+
+### Member wise copy and Initializer list
+**Member wise copy**
+- Two steps: object creation, member variable assignment
+- Potential unnecessary copies of data
+- order of member variables doesn't matter
+
+**Initializer list**
+- Initialization happens at real object creation
+- Unnecessary copies avoided
+- Order of member variables matters
