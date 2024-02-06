@@ -1339,3 +1339,8 @@ class Square{
   }
 }
 ```
+## Copy constructor
+```cpp
+Person::Person(const Person &source): m_name(source.name()) , ...{
+}
+``
