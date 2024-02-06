@@ -1327,3 +1327,15 @@ class Test{
 - Initialization happens at real object creation
 - Unnecessary copies avoided
 - Order of member variables matters
+
+## Constructor delegation
+```cpp
+class Square{
+  Square(int a) : Square(a, "object1", "yellow"){
+  }
+
+  Square(int a, std::string name, std::string color) :
+    m_a(a), m_name(name), m_color(color){
+  }
+}
+```
