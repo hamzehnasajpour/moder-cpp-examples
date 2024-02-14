@@ -1344,7 +1344,7 @@ class Square{
 ```cpp
 Person::Person(const Person &source): m_name(source.name()) , ...{
 }
-``
+```
 
 ## Shallow copy and Deep copy
 ### Shallow copy
@@ -1352,3 +1352,9 @@ Member wise copy of member variables, even for pointers. **Default copy construc
 
 ### Deep copy
 When pointer member variables are involved, allocating new memory and copying in data from the source pointer.
+
+## Move constructor
+```cpp
+Person::Person(const Person &&source): m_name(source.name(),...){
+}
+```
