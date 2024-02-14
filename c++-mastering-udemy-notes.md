@@ -1244,6 +1244,7 @@ T func(T t) requires std::integral<T> &&
             requires my_concept<T>{
   // ...
 }
+```
 
 ## Mutable variables
 In C++, when you declare a member variable as "mutable" within a class, it means that the variable can be modified even if the instance of the class is declared as const. This is useful when you have a member variable that needs to be modified within a const member function.
