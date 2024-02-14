@@ -1358,3 +1358,9 @@ When pointer member variables are involved, allocating new memory and copying in
 Person::Person(const Person &&source): m_name(source.name(),...){
 }
 ```
+
+## Deleted constructor
+```cpp
+Person() = delete;
+Person(const Person &&source) = delete;
+```
